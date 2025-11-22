@@ -8,4 +8,4 @@
 
 ## Research Interests
 - Computer Architecture and Systems
-- Hardware Accelerators and Acceleration of Emerging Workloads
+- Accelerating ML and Emerging Workloads
