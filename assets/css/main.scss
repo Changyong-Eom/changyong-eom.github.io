@@ -1,0 +1,315 @@
+---
+# Required so Jekyll processes this file.
+---
+// ─── Tokens ─────────────────────────────────────────
+$max-width: 760px;
+
+// Light palette
+$light-bg: #ffffff;
+$light-text: #111418;
+$light-muted: #6b7280;
+$light-subtle: #9ca3af;
+$light-link: #4f46e5;
+$light-link-hover: #3730a3;
+$light-border: #ececf1;
+$light-card: #fafafa;
+
+// Dark palette
+$dark-bg: #0e0f12;
+$dark-text: #e5e7eb;
+$dark-muted: #9ca3af;
+$dark-subtle: #6b7280;
+$dark-link: #818cf8;
+$dark-link-hover: #a5b4fc;
+$dark-border: #1f2125;
+$dark-card: #16181c;
+
+$font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-mono: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+$font-script: 'Caveat', cursive;
+
+:root {
+  --bg: #{$light-bg};
+  --text: #{$light-text};
+  --muted: #{$light-muted};
+  --subtle: #{$light-subtle};
+  --link: #{$light-link};
+  --link-hover: #{$light-link-hover};
+  --border: #{$light-border};
+  --card: #{$light-card};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #{$dark-bg};
+    --text: #{$dark-text};
+    --muted: #{$dark-muted};
+    --subtle: #{$dark-subtle};
+    --link: #{$dark-link};
+    --link-hover: #{$dark-link-hover};
+    --border: #{$dark-border};
+    --card: #{$dark-card};
+  }
+}
+
+// ─── Reset ──────────────────────────────────────────
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+img { max-width: 100%; display: block; }
+
+// ─── Base ───────────────────────────────────────────
+body {
+  font-family: $font-sans;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  line-height: 1.25;
+}
+
+h1 { font-size: 1.85rem; margin: 0 0 .25rem; }
+h2 { font-size: 1.25rem; margin: 2.5rem 0 .75rem; padding-bottom: .4rem; border-bottom: 1px solid var(--border); }
+h3 { font-size: 1.05rem; margin: 1.5rem 0 .5rem; }
+
+p { margin: 1rem 0; }
+strong { font-weight: 600; color: var(--text); }
+code {
+  font-family: $font-mono;
+  font-size: 0.88em;
+  background: var(--card);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+// ─── Layout ─────────────────────────────────────────
+.site-header {
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 0;
+  margin-bottom: 3.5rem;
+}
+
+.navbar {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text) !important;
+  letter-spacing: -0.01em;
+
+  &:hover { text-decoration: none; }
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  a {
+    color: var(--muted);
+    font-size: 0.92rem;
+    position: relative;
+    padding: 0.25rem 0;
+
+    &:hover { color: var(--link); text-decoration: none; }
+
+    &.active {
+      color: var(--text);
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0; right: 0; bottom: -2px;
+        height: 1.5px;
+        background: var(--link);
+      }
+    }
+  }
+}
+
+.content {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.site-footer {
+  max-width: $max-width;
+  margin: 4rem auto 2rem;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--subtle);
+  font-size: 0.82rem;
+
+  a { color: var(--muted); }
+}
+
+// ─── About ──────────────────────────────────────────
+.profile {
+  display: flex;
+  gap: 2.25rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+}
+
+.profile-photo {
+  width: 160px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.profile-meta {
+  flex: 1;
+  padding-top: 0.25rem;
+}
+
+.position {
+  color: var(--text);
+  font-size: 1rem;
+  margin: 0.4rem 0 0.1rem;
+}
+
+.affiliation {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin: 0 0 1.1rem;
+}
+
+.contact-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  font-size: 0.88rem;
+
+  @media (max-width: 600px) {
+    justify-content: center;
+  }
+
+  a {
+    color: var(--muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+
+    &:hover { color: var(--link); text-decoration: none; }
+  }
+}
+
+.bio {
+  margin-top: 0.5rem;
+
+  p { margin: 1.1rem 0; }
+}
+
+.signature {
+  margin-top: 3.5rem !important;
+  margin-bottom: 1rem;
+  font-family: $font-script;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--link);
+  text-align: center;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  opacity: 0.85;
+}
+
+// ─── News ───────────────────────────────────────────
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.news-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px dashed var(--border);
+  font-size: 0.95rem;
+
+  &:last-child { border-bottom: none; }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}
+
+.news-date {
+  flex-shrink: 0;
+  width: 110px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-variant-numeric: tabular-nums;
+  padding-top: 0.1rem;
+}
+
+.news-text { flex: 1; color: var(--text); }
+
+// ─── CV / Page ──────────────────────────────────────
+.content ul:not(.nav-links):not(.contact-links):not(.news-list) {
+  padding-left: 1.3rem;
+  li { margin: 0.4rem 0; }
+}
+
+.page-title {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+// ─── Subtle entrance ────────────────────────────────
+.content > * {
+  animation: rise 0.4s ease-out both;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}

@@ -1,0 +1,43 @@
+# Site
+title: Changyong Eom
+description: MS Student at KAIST School of Computing, CASYS Lab. Computer architecture and hardware accelerators for emerging ML workloads.
+url: "https://changyong-eom.github.io"
+baseurl: ""
+
+# Author
+author:
+  name: Changyong Eom
+  email: cyeom@casys.kaist.ac.kr
+
+# Build
+permalink: pretty
+markdown: kramdown
+highlighter: rouge
+sass:
+  style: compressed
+
+# Navigation (ordered)
+navigation:
+  - name: about
+    url: /
+  - name: news
+    url: /news/
+  - name: cv
+    url: /cv/
+
+# Social links — fill in when ready, leave blank to hide
+social:
+  email: cyeom@casys.kaist.ac.kr
+  github:        # e.g. changyong-eom
+  scholar:       # e.g. https://scholar.google.com/citations?user=XXXX
+  linkedin:      # e.g. changyong-eom
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .bundle
