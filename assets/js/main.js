@@ -1,4 +1,23 @@
 (function () {
+  // Dark-mode toggle (overrides the OS preference, persisted in localStorage)
+  var root = document.documentElement;
+  var toggle = document.querySelector('.theme-toggle');
+  if (toggle) {
+    toggle.addEventListener('click', function () {
+      var current = root.getAttribute('data-theme');
+      var effective;
+      if (current === 'dark' || current === 'light') {
+        effective = current;
+      } else {
+        effective = window.matchMedia &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      var next = effective === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  }
+
   // Copy-to-clipboard buttons inside contact popovers
   document.querySelectorAll('.copy-btn').forEach(function (btn) {
     btn.addEventListener('click', function (e) {
