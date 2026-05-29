@@ -182,6 +182,8 @@ code {
   gap: 2.25rem;
   align-items: flex-start;
   margin-bottom: 2rem;
+  position: relative;
+  z-index: 5;
 
   @media (max-width: 600px) {
     flex-direction: column;
@@ -224,20 +226,110 @@ code {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 1rem;
+  gap: 0.45rem 1.1rem;
   font-size: 0.88rem;
 
   @media (max-width: 600px) {
     justify-content: center;
   }
+}
 
-  a {
-    color: var(--muted);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
+.contact-item {
+  position: relative;
+}
 
-    &:hover { color: var(--link); text-decoration: none; }
+.contact-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--muted);
+  cursor: pointer;
+
+  &:hover { color: var(--link); text-decoration: none; }
+
+  .icon {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+  }
+}
+
+.has-popover .popover {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 50;
+  min-width: 210px;
+  max-width: 290px;
+  margin-top: 8px;
+  padding: 0.75rem 0.85rem 2.4rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.13);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s;
+
+  // invisible bridge so the cursor can travel from trigger into the box
+  &::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 0;
+    right: 0;
+    height: 8px;
+  }
+}
+
+.has-popover:hover .popover,
+.has-popover.open .popover {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.popover-text {
+  display: block;
+  margin: 0;
+  word-break: break-word;
+  color: var(--text);
+}
+
+a.popover-text:hover { color: var(--link); }
+
+.copy-btn {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.45rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  color: var(--muted);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+
+  svg { width: 14px; height: 14px; }
+  .icon-check { display: none; }
+
+  &:hover { color: var(--link); border-color: var(--link); }
+
+  &.copied {
+    color: #16a34a;
+    border-color: #16a34a;
+
+    .icon-copy { display: none; }
+    .icon-check { display: block; }
   }
 }
 
@@ -245,6 +337,8 @@ code {
   margin-top: 0.5rem;
 
   p { margin: 1.1rem 0; }
+
+  p strong { color: var(--link); }
 
   h2:first-child { margin-top: 1.25rem; }
 }
