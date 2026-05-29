@@ -5,7 +5,7 @@ description: MS Student at KAIST School of Computing, CASYS Lab. Computer Archit
 ---
 
 <section class="profile">
-  <img src="{{ '/assets/img/profile.svg' | relative_url }}" alt="Changyong Eom" class="profile-photo">
+  <img src="{{ '/assets/img/profile.jpg' | relative_url }}" alt="Changyong Eom" class="profile-photo">
   <div class="profile-meta">
     <h1>Changyong Eom</h1>
     <p class="position">MS Student · School of Computing, KAIST</p>
