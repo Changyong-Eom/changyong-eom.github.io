@@ -23,9 +23,24 @@ description: MS Student at KAIST School of Computing, CASYS Lab. Computer Archit
 
 <section class="bio" markdown="1">
 
-I'm a MS student in the [School of Computing](https://cs.kaist.ac.kr/) at KAIST, advised by [Prof. Jaehyuk Huh](https://jaehyuk-huh.github.io/) in the [Computer Architecture and Systems Laboratory (CASYS)](https://casyslab.kaist.ac.kr/).
+## Short Bio
+
+I'm an MS student in the [School of Computing](https://cs.kaist.ac.kr/) at KAIST, advised by [Prof. Jaehyuk Huh](https://jaehyuk-huh.github.io/) in the [Computer Architecture and Systems Laboratory (CASYS)](https://casyslab.kaist.ac.kr/).
 
 My research sits at the intersection of **computer architecture** and **emerging workloads** — particularly **hardware accelerators** that make modern ML systems faster, more efficient, and a little more elegant.
+
+## Education
+
+- **MS in Computer Science**, KAIST — Mar. 2026 – Present
+  - Advisor: [Prof. Jaehyuk Huh](https://jaehyuk-huh.github.io/)
+  - Lab: [Computer Architecture and Systems Laboratory (CASYS)](https://casyslab.kaist.ac.kr/)
+- **BS in Computer Science and Electrical Engineering** (Double Major), KAIST — Feb. 2019 – Feb. 2026
+
+## Research Interests
+
+- Computer Architecture and Systems
+- Hardware Accelerators
+- Acceleration of Emerging ML Workloads
 
 <p class="signature">I love the computer itself.</p>
 

@@ -20,8 +20,8 @@ sass:
 navigation:
   - name: about
     url: /
-  - name: news
-    url: /news/
+  - name: publications
+    url: /publications/
   - name: cv
     url: /cv/
 

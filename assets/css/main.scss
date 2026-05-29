@@ -245,6 +245,8 @@ code {
   margin-top: 0.5rem;
 
   p { margin: 1.1rem 0; }
+
+  h2:first-child { margin-top: 1.25rem; }
 }
 
 .signature {
@@ -260,41 +262,8 @@ code {
   opacity: 0.85;
 }
 
-// ─── News ───────────────────────────────────────────
-.news-list {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem 0;
-}
-
-.news-item {
-  display: flex;
-  gap: 1.5rem;
-  padding: 0.9rem 0;
-  border-bottom: 1px dashed var(--border);
-  font-size: 0.95rem;
-
-  &:last-child { border-bottom: none; }
-
-  @media (max-width: 600px) {
-    flex-direction: column;
-    gap: 0.2rem;
-  }
-}
-
-.news-date {
-  flex-shrink: 0;
-  width: 110px;
-  color: var(--muted);
-  font-size: 0.88rem;
-  font-variant-numeric: tabular-nums;
-  padding-top: 0.1rem;
-}
-
-.news-text { flex: 1; color: var(--text); }
-
 // ─── CV / Page ──────────────────────────────────────
-.content ul:not(.nav-links):not(.contact-links):not(.news-list) {
+.content ul:not(.nav-links):not(.contact-links) {
   padding-left: 1.3rem;
   li { margin: 0.4rem 0; }
 }
@@ -302,6 +271,51 @@ code {
 .page-title {
   font-size: 1.6rem;
   margin-bottom: 1.5rem;
+}
+
+.empty-note {
+  color: var(--muted);
+  font-style: italic;
+}
+
+// ─── Publications ───────────────────────────────────
+.pub-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.pub-item {
+  padding-bottom: 1.3rem;
+  margin-bottom: 1.3rem;
+  border-bottom: 1px solid var(--border);
+
+  &:last-child { border-bottom: none; margin-bottom: 0; }
+}
+
+.pub-title {
+  margin: 0 0 0.35rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.pub-authors {
+  margin: 0.1rem 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.pub-me {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.pub-venue {
+  margin: 0.1rem 0;
+  color: var(--subtle);
+  font-size: 0.88rem;
+  font-style: italic;
 }
 
 // ─── Subtle entrance ────────────────────────────────
