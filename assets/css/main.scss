@@ -77,6 +77,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -209,12 +212,15 @@ code {
 :root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
 
 .content {
+  width: 100%;
   max-width: $max-width;
   margin: 0 auto;
   padding: 0 1.5rem 4rem;
+  flex: 1 0 auto;
 }
 
 .site-footer {
+  width: 100%;
   max-width: $max-width;
   margin: 4rem auto 2rem;
   padding: 1.5rem;
@@ -222,6 +228,7 @@ code {
   text-align: center;
   color: var(--subtle);
   font-size: 0.82rem;
+  flex-shrink: 0;
 
   a { color: var(--muted); }
 }
