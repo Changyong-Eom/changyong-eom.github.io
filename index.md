@@ -27,6 +27,6 @@ I'm a MS student in the [School of Computing](https://cs.kaist.ac.kr/) at KAIST,
 
 My research sits at the intersection of **computer architecture** and **emerging workloads** — particularly **hardware accelerators** that make modern ML systems faster, more efficient, and a little more elegant.
 
-<p class="signature">I love computer itself.</p>
+<p class="signature">I love the computer itself.</p>
 
 </section>
