@@ -60,9 +60,11 @@ My research sits at the intersection of **computer architecture** and **emerging
 
 ## Education
 
-- **MS in Computer Science**, KAIST — Mar. 2026 – Present
+- **MS in Computer Science**, KAIST
+  - Mar. 2026 ~ Present
   - Advisor: Prof. Jaehyuk Huh
-- **BS in Computer Science and Electrical Engineering** (Double Major), KAIST — Feb. 2019 – Feb. 2026
+- **BS in Computer Science and Electrical Engineering** (Double Major), KAIST
+  — Feb. 2019 ~ Feb. 2026
 
 <p class="signature">I love the computer itself.</p>
 
