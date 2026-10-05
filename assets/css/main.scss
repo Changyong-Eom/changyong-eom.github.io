@@ -479,6 +479,13 @@ a.popover-text:hover { color: var(--link); }
   font-style: italic;
 }
 
+.pub-link {
+  margin-left: 0.35rem;
+  font-style: normal;
+  font-size: 0.82rem;
+  color: var(--link);
+}
+
 // ─── Subtle entrance ────────────────────────────────
 .content > * {
   animation: rise 0.4s ease-out both;

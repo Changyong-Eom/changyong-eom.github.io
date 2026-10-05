@@ -11,11 +11,11 @@ permalink: /publications/
   <li class="pub-item">
     <p class="pub-title">Precision-Flexible Processing Units for Fully Utilizing Internal Bandwidth in PIM</p>
     <p class="pub-authors">S. Kim, <span class="pub-me">C. Eom</span>, S. Moon, S. Jeong, Y. Han, J. Huh</p>
-    <p class="pub-venue">IEEE Computer Architecture Letters, early access, 2026</p>
+    <p class="pub-venue">IEEE Computer Architecture Letters, early access, 2026 <a class="pub-link" href="https://ieeexplore.ieee.org/document/11711458" target="_blank" rel="noopener">[link]</a></p>
   </li>
   <li class="pub-item">
     <p class="pub-title">Enabling Computation and Communication Overlap in PIMs for On-Device LLM Inference</p>
     <p class="pub-authors">S. Jeong, S. Kim, <span class="pub-me">C. Eom</span>, J. Huh</p>
-    <p class="pub-venue">IEEE Computer Architecture Letters, vol. 25, no. 1, pp. 126–129, 2026</p>
+    <p class="pub-venue">IEEE Computer Architecture Letters, vol. 25, no. 1, pp. 126–129, 2026 <a class="pub-link" href="https://ieeexplore.ieee.org/document/11452247" target="_blank" rel="noopener">[link]</a></p>
   </li>
 </ul>
