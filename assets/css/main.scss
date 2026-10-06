@@ -396,6 +396,7 @@ a.popover-text:hover { color: var(--link); }
   p { margin: 1.1rem 0; }
 
   p strong { color: var(--link); }
+  p strong.plain { color: var(--text); }
 
   h2:first-child { margin-top: 1.25rem; }
 }
